@@ -6,4 +6,4 @@ puts "George".blue
 puts "Ringo".yellow
 
 puts String.colors
-String.colors_sample
+String.sample_colors

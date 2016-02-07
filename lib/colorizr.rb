@@ -25,10 +25,8 @@ class String
 		index = 1
 		puts ""
 		@@colors.each do |color_name, color_code|
-			color_str = "#{color_name}"
-			color_str.create_colors
-			color_sym = color_str.to_sym
-			puts "#{index}. " + color_str.send(color_sym)
+			color_str = color_name.to_s
+			puts "#{index}. " + color_str.send(color_name)
 			index += 1
 		end
 		puts ""

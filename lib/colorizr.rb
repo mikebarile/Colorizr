@@ -3,13 +3,13 @@ class String
 	@@colors = {black: 232, red: 1, green: 10, yellow: 11, blue: 21, pink: 207, light_grey: 247, white: 256, light_blue: 33}
 
 	#Defines all of the color methods
-	def create_colors
-    	@@colors.each{|color_name, color_code| create_method(color_name, color_code)}
+	def self.create_colors
+    	@@colors.each{|color_name, color_code| self.create_method(color_name, color_code)}
   	end
 
   	#Creates methods that return strings with color
-	def create_method(color_name, color_code)
-		  self.class.send(:define_method, "#{color_name}") do
+	def self.create_method(color_name, color_code)
+		  self.send(:define_method, "#{color_name}") do
 		  	"\e[38;5;#{color_code}m" + self + "\e[0m"
 		  end 
   	end
@@ -33,5 +33,7 @@ class String
 		end
 		puts ""
 	end
+
+String.create_colors
 
 end

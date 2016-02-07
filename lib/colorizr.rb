@@ -32,6 +32,7 @@ class String
 		puts ""
 	end
 
-String.create_colors
+	#Executes create_colors
+	String.create_colors
 
 end

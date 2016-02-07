@@ -18,7 +18,6 @@ class String
 	def self.colors
 		colors_array = []
 		@@colors.each{|color_name, color_code| colors_array << color_name}
-		return colors_array
 	end
 
 	#Prints sample output demonstrating different colors
@@ -26,7 +25,10 @@ class String
 		index = 1
 		puts ""
 		@@colors.each do |color_name, color_code|
-			puts "#{index}. " + "#{color_name}"
+			color_str = "#{color_name}"
+			color_str.create_colors
+			color_sym = color_str.to_sym
+			puts "#{index}. " + color_str.send(color_sym)
 			index += 1
 		end
 		puts ""

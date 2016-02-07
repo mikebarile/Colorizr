@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'colorizr'
-  s.version     = '0.0.2'
+  s.version     = '0.0.4'
   s.date        = '2016-02-06'
   s.summary     = "Colors Everywhere!"
   s.description = "A simple gem to colorize terminal output"

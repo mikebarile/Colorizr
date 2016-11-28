@@ -1,7 +1,0 @@
-1. My gem uses the define_method module method to write a series of String class methods without having to write each out separately.
-
-2. This project took a lot longer than previous projects. I had to spend a lot of time on stack overflow and in the Rubydocs to figure out how to complete the task. I also spent a LOT of time debugging, including three hours trying to figure out why changes to my file weren't reflected in the console (had to reinstall the gem file :-)).
-
-3. By far the most rewarding challenge conquered was when I was able to get 'create_colors' to work as a class method. It turned out the reason it wasn't working was because I had included self.class.send in my 'create_method' method vs. just self.send. That took FOREVER to figure out - lesson learned was don't copy paste code I find in rubydocs without understanding what it does :)
-
-4. Still have room to grow EVERYWHERE
